@@ -16,18 +16,14 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-@app.get("/")
-def read_root():
-    return {"Hello": "World"}
-
 @app.post("/ai-response")
 async def ai_response(payload: dict):
     prompt_text = payload.get("prompt")
-    async with httpx.AsyncClient() as client:
-        response = await client.post("http://ai_therapist:8000/ask", json={"prompt": prompt_text})
+    timeout = httpx.Timeout(30.0, read=30.0)
+    async with httpx.AsyncClient(timeout=timeout) as client:
         try:
+            response = await client.post("http://ai_therapist:8000/ask", json={"prompt": prompt_text})
             response.raise_for_status()
-            ai_result = response.json()
-            return ai_result
+            return response.json()
         except httpx.HTTPStatusError as exc:
             return {"error": f"AI service error {exc.response.status_code}: {exc.response.text}"}
