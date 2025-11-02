@@ -1,0 +1,39 @@
+@import "tailwindcss";
+
+:root {
+  --foreground: #171717;
+}
+
+body {
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.site-form div {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.site-form label {
+  min-width: 100px;
+  margin-right: 10px;
+  display: inline-block;
+}
+
+.site-form input[type="text"] {
+  border: solid 1px black;
+}
+
+.site-form input[type="password"] {
+  border: solid 1px black;
+}
+
+.site-form select {
+  background-color: black;
+}
+
+.invalid-message {
+  color: red;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
