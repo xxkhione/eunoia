@@ -10,13 +10,14 @@ export default function SignIn() {
     const [passwordErrorHidden, setPasswordErrorHidden] = useState(true)
 
     return (
-        <div className='site-form'>
+        <main className='min-h-screen text-white'>
+            <div className='site-form'>
             <h1>Welcome back!</h1>
             <p>None of this is currently functional, mostly filler until I set up my databases! I will also be flushing this out more later on.</p>
             <p>Self Note: This is where the authentication service will be set up to authenticate if a user exists.</p>
             <div className="input-group">
                 <label htmlFor="username">Username: </label>
-                <input className="outline outline-1 outline-black rounded-md" type="text" id="username" name="username" value={username} onChange={(e) => setUserame(e.target.value)} required />
+                <input className="outline-1 outline-black rounded-md" type="text" id="username" name="username" value={username} onChange={(e) => setUserame(e.target.value)} required />
                 <span hidden={userNameErrorHidden}>
                     <p className='invalid-message'>Username cannot be blank</p>
                 </span>
@@ -24,7 +25,7 @@ export default function SignIn() {
 
             <div className="input-group">
                 <label htmlFor="password">Password: </label>
-                <input className="outline outline-1 outline-black rounded-md" type="password" id="password" name="password" value={password} onChange={(e) => setPassword(e.target.value)} required />
+                <input className="outline-1 outline-black rounded-md" type="password" id="password" name="password" value={password} onChange={(e) => setPassword(e.target.value)} required />
                 <span hidden={passwordErrorHidden}>
                     <p className='invalid-message'>Password cannot be blank</p>
                 </span>
@@ -39,5 +40,6 @@ export default function SignIn() {
                 Log in
             </button>
         </div>
+        </main>
     )
 }

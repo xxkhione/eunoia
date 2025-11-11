@@ -1,6 +1,6 @@
 export default function Profile() {
     return (
-        <main className='min-h-screen bg-blue-400 text-white'>
+        <main className='min-h-screen text-white'>
             <div>
                 <h1>Hello, (user's name here)!</h1>
             </div>

@@ -1,6 +1,6 @@
 export default function Forums() {
     return (
-        <main className='min-h-screen bg-blue-400 text-white'>
+        <main className='min-h-screen text-white'>
             <div>
                 <p>
                     This will be outsourced articles based on the user's conversations with the AI therapist.

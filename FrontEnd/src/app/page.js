@@ -20,12 +20,18 @@ export default function Page() {
                             This is currently filler text since I am building out the basic outline of the website at this very moment.
                         </p>
                     </span>
-                    <span className="inline-block w-130 h-10">
+                    <span className="inline-block w-130 h-10 ml-10">
                         <p className='text-lg mb-8 max-w-2xl mx-auto lg:mx-0 opacity-90'>
                             This will be discussing the purpose of the website and how to use it.
                             This is currently filler text since I am building out the basic outline of the website at this very moment.
                         </p>
                     </span>
+                </div>
+            </section>
+            <section className='flex flex-col lg:flex-row items-center justify-center p-8 py-16 lg:py-24 max-w-7xl mx-auto min-h-auto gap-12 bg-white'>
+                <div className='flex items-center justify-center'>
+                    <h3 className='text-black w-max'>Start your journey today!</h3>
+                    <button className='bg-[#F9F4FB]'>Create an Account</button>
                 </div>
             </section>
         </main>
