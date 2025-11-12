@@ -72,17 +72,19 @@ services:
   #     - auth_service
   #   restart: always
 
-  # auth_service:
-  #   build:
-  #     context: ./UserAuthService
-  #   container_name: auth_service
-  #   ports:
-  #     - "3004:8000"
-  #   networks:
-  #     - eunoia_network
-  #   depends_on:
-  #     - postgres
-  #   restart: always
+  auth_service:
+    build:
+      context: ./UserAuthService
+    container_name: auth_service
+    ports:
+      - "3004:8000"
+    networks:
+      - eunoia_network
+    environment:
+      - NEXTAUTH_KEY=${NEXTAUTH_KEY}
+    depends_on:
+      - postgres
+    restart: always
 
   # data_service:
   #   build:
