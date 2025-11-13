@@ -10,7 +10,6 @@ export default NextAuth({
                 password: { label: "Password", type: "password" },
             },
             async authorize(credentials) {
-                // Replace with actual user lookup
                 if (credentials && credentials.username === "user" && credentials.password === "password") {
                     return { id: "1", name: "User", email: "user@example.com" };
                 }
@@ -18,7 +17,7 @@ export default NextAuth({
             },
         }),
     ],
-    secret: process.env.NEXTAUTH_SECRET,
+    secret: process.env.NEXTAUTH_KEY,
     callbacks: {
         async jwt({ token, user }) {
             if (user) token.id = user.id;

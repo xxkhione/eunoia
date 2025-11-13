@@ -20,7 +20,7 @@ services:
       - back_end
       - ai_therapist
       # - security_bot
-      # - auth_service
+      - auth_service
       # - data_service
     volumes:
       - ./nginx.conf:/etc/nginx/nginx.conf:ro
