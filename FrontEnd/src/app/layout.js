@@ -11,23 +11,24 @@ export default function RootLayout({ children }) {
         <header>
           <nav className='w-full bg-[#DACBEA] py-3 shadow-md'>
             <ul className='flex justify-center list-none p-0 m-0'>
-              <li>
-                <Link href='/' className='text-white hover:text-[#CDA7E2] px-5 py-2 text-lg font-semibold transition-colors duration-300'>Home</Link>
+              <li className='sm:mx-2 my-1 sm:my-0'>
+                <Link href='/' className='text-white hover:text-[#CDA7E2] px-5 py-2 text-md lg:text-lg font-semibold transition-colors duration-300'>Home</Link>
               </li>
-              <li>
-                <Link href='/chat' className='text-white hover:text-[#CDA7E2] px-5 py-2 text-lg font-semibold transition-colors duration-300'>Chat</Link>
+              {/* Dealing with cookies to handle displaying these (is logged in etc.)
+              <li className='sm:mx-2 my-1 sm:my-0'>
+                <Link href='/chat' className='text-white hover:text-[#CDA7E2] px-5 py-2 text-sm lg:text-lg font-semibold transition-colors duration-300'>Chat</Link>
               </li>
-              <li>
-                <Link href='/forums' className='text-white hover:text-[#CDA7E2] px-5 py-2 text-lg font-semibold transition-colors duration-300'>Forums</Link>
+              <li className='sm:mx-2 my-1 sm:my-0'>
+                <Link href='/forums' className='text-white hover:text-[#CDA7E2] px-5 py-2 text-sm lg:text-lg font-semibold transition-colors duration-300'>Forums</Link>
               </li>
-              <li>
-                <Link href='/profile' className='text-white hover:text-[#CDA7E2] px-5 py-2 text-lg font-semibold transition-colors duration-300'>Profile</Link>
+              <li className='sm:mx-2 my-1 sm:my-0'>
+                <Link href='/profile' className='text-white hover:text-[#CDA7E2] px-5 py-2 text-sm lg:text-lg font-semibold transition-colors duration-300'>Profile</Link>
+              </li> */}
+              <li className='sm:mx-2 my-1 sm:my-0'>
+                <Link href='/sign-up' className='text-white hover:text-[#CDA7E2] px-5 py-2 text-md lg:text-lg font-semibold transition-colors duration-300'>Create an Account</Link>
               </li>
-              <li>
-                <Link href='/sign-up' className='text-white hover:text-[#CDA7E2] px-5 py-2 text-lg font-semibold transition-colors duration-300'>Create an Account</Link>
-              </li>
-              <li>
-                <Link href='/sign-in' className='text-white hover:text-[#CDA7E2] px-5 py-2 text-lg font-semibold transition-colors duration-300'>Login</Link>
+              <li className='sm:mx-2 my-1 sm:my-0'>
+                <Link href='/sign-in' className='text-white hover:text-[#CDA7E2] px-5 py-2 text-md lg:text-lg font-semibold transition-colors duration-300'>Login</Link>
               </li>
             </ul>
           </nav>
