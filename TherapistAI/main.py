@@ -5,6 +5,7 @@ import asyncio
 import traceback
 import os
 from google import genai
+import guidelines
 
 load_dotenv()
 
@@ -22,11 +23,12 @@ def read_root():
 
 @app.post("/ask")
 async def ask_gemini(prompt_request: PromptRequest):
+    prompt = guidelines.guidelines + prompt_request.prompt
     try:
         response = await asyncio.to_thread(
             lambda: client.models.generate_content(
                 model='gemini-2.5-flash',
-                contents=prompt_request.prompt
+                contents=prompt
             )
         )
         return {"response": response.text}
