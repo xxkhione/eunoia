@@ -60,18 +60,6 @@ services:
   #     - eunoia_network
   #   restart: always
 
-  # email_service:
-  #   build:
-  #     context: ./EmailService
-  #   container_name: email_service
-  #   ports:
-  #     - "3003:8000"
-  #   networks:
-  #     - eunoia_network
-  #   depends_on:
-  #     - auth_service
-  #   restart: always
-
   auth_service:
     build:
       context: ./UserAuthService
